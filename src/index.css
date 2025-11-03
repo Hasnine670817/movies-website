@@ -22,7 +22,16 @@
 
 @layer base {
   body {
-    @apply font-roboto;
+    @apply font-roboto bg-black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-josefin font-bold text-white;
   }
 
   span {

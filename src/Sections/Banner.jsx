@@ -42,7 +42,7 @@ const Banner = () => {
             <div className='text-white absolute left-1/2 -translate-x-1/2 top-[140px] lg:top-[180px] xl:top-[180px] z-[1] text-center max-w-[634px] w-full mx-auto'>
                 <div className='container-custom'>
                     <h2 className='text-2xl sm:text-3xl md:text-4xl md:leading-[1.3] xl:text-[45px] xl:leading-[60px] 2xl:text-[50px] 2xl:leading-[70px] font-black font-josefin uppercase'>Unlimited movies, TV <br /> shows, and more</h2>
-                    <h4 className='text-sm md:text-base xl:text-xl mt-3 mb-5 lg:mt-4 lg:mb-7 tracking-[0.5px]'>Starts at USD 2.99. Cancel anytime.</h4>
+                    <h4 className='text-sm md:text-base xl:text-xl mt-3 mb-5 lg:mt-4 lg:mb-7 tracking-[0.2px] font-normal'>Starts at USD 2.99. Cancel anytime.</h4>
                     <p className='text-xs md:text-sm xl:text-base tracking-[0.2px]'>Ready to watch? Enter your email to create or restart your membership.</p>
 
                     <form className='max-w-[400px] md:max-w-[480px] xl:max-w-[600px] mx-auto pt-4' onClick={(e) => e.preventDefault()}>
