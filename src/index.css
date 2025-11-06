@@ -52,6 +52,13 @@
   .container-custom {
     @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1120px] 2xl:max-w-[1352px] mx-auto px-5;
   }
+
+
+  /* image__bg__wrapper */
+
+  .image__bg__wrapper::after {
+    @apply content-[""] absolute bg-[linear-gradient(0deg,rgba(22,_22,_22,_1)_12%,_rgba(253,_187,_45,_0)_100%)] left-0 bottom-0 w-full h-full
+  }
 }
 
 @layer utilities {
@@ -118,23 +125,23 @@
     object-fit: cover;
     display: block;
     transform-origin: center center;
-    /* hardware-accelerate */
     will-change: transform;
     backface-visibility: hidden;
-    /* smooth animation */
-    animation: zoomInOut 10s ease-in-out infinite;
+    animation: zoomInOut 15s ease-in-out infinite;
   }
 
-  /* keyframes: scale up then back down */
+  /* smooth scale up and back down */
   @keyframes zoomInOut {
     0% {
       transform: scale(1);
     }
-    100% {
+    50% {
       transform: scale(1.3);
     }
+    100% {
+      transform: scale(1);
+    }
   }
-
 
   /* commonSwiper */
 
@@ -167,14 +174,16 @@
     transition: 0.3s all ease-in-out;
   }
 
-
   .serial-span {
     line-height: 1;
     display: inline-block;
-    color: rgb(65,65,65);
-    -webkit-text-stroke: 1px rgb(255,255,255);
-    text-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
-    -webkit-text-fill-color: rgb(0,0,0);
+    color: rgb(65, 65, 65);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    -webkit-text-fill-color: rgb(0, 0, 0);
   }
 
+
+
+  /* image__bg__wrapper */
 }

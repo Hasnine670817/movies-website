@@ -18,10 +18,10 @@ const Banner = () => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 loop={true}
                 speed={1000}
                 effect="fade"

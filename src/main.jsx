@@ -10,6 +10,7 @@ import './index.css'
 import MainLayouts from './Layouts/MainLayouts';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import MoviesDetails from './Components/MoviesDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+      },
+      {
+        path: "/movie/:id",
+        element: <MoviesDetails></MoviesDetails>
       }
     ]
   },

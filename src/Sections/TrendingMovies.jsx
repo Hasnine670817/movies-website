@@ -5,17 +5,40 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { useNavigate } from "react-router-dom";
 
 const TrendingMovies = () => {
 
     const [movies, setMovies] = useState([]);
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('/Movies.json')
             .then(res => res.json())
-            .then(data => setMovies(data))
-            .catch(error => console.error(error))
-    }, [])
+            .then(data => {
+                setMovies(data);
+                setLoading(false)
+            })
+            .catch(error => {
+                console.error(error);
+                setLoading(false)
+            })
+    }, []);
+
+    const handleVideoDetails = (id) => {
+        navigate(`/movie/${id}`)
+        // setSelectedMovie(movie);
+        // document.getElementById('movies__details').showModal();
+    }
+
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-[60vh] transition-opacity duration-700">
+                <span className="loading loading-bars loading-xl text-red-600"></span>
+            </div>
+        );
+    }
 
     const trendingMovies = movies.filter(movie => movie.isTrending === true);
     const movieSlice = trendingMovies.slice(0, 6);
@@ -75,7 +98,7 @@ const TrendingMovies = () => {
                     >
                         {
                             movieSlice.map((movie, idx) => (
-                                <SwiperSlide key={idx} className="py-5">
+                                <SwiperSlide key={idx} className="py-5" onClick={() => handleVideoDetails(movie.id)}>
                                     <figure className="relative w-full rounded-2xl bg-white/50 hover:scale-105 transition-all duration-300 cursor-pointer">
                                         <img className="[aspect-ratio:1/1.2] rounded-2xl w-full object-cover" src={movie?.poster} alt="image" />
                                         <span className="serial-span font-sans absolute left-0 lg:-left-5 bottom-2 lg:bottom-5 font-bold text-6xl sm:text-7xl lg:text-8xl">
@@ -86,6 +109,12 @@ const TrendingMovies = () => {
                             ))
                         }
                     </Swiper>
+
+                    {/* {
+                        selectedMovie && (
+                            <MoviesDetails movie={selectedMovie}></MoviesDetails>
+                        )
+                    } */}
                 </div>
             </div>
         </section>
