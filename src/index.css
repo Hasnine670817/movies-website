@@ -22,7 +22,7 @@
 
 @layer base {
   body {
-    @apply font-roboto bg-black;
+    @apply font-roboto bg-black min-h-screen;
   }
 
   h1,

@@ -11,6 +11,7 @@ import MainLayouts from './Layouts/MainLayouts';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import MoviesDetails from './Components/MoviesDetails';
+import AllTrendingMovies from './Movies/AllTrendingMovies';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,8 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/about",
-        element: <About></About>
+        path: "/all-trending-movies",
+        element: <AllTrendingMovies></AllTrendingMovies>
       },
       {
         path: "/movie/:id",

@@ -4,12 +4,28 @@ import JoinCard from "../DynamicCards/JoinCard";
 const JoinSection = () => {
 
     const [joinCards, setJoinCards] = useState([]);
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch('/DataCard.json')
             .then(res => res.json())
-            .then(data => setJoinCards(data))
+            .then(data => {
+                setJoinCards(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error(error);
+                setLoading(false);
+            })
     }, [])
+
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-[60vh] transition-opacity duration-700">
+                <span className="loading loading-bars loading-xl text-red-600"></span>
+            </div>
+        );
+    }
 
 
     return (

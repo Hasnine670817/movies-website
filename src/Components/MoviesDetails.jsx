@@ -19,23 +19,23 @@ const MoviesDetails = () => {
     if (!movie) {
         return (
             <div className="flex justify-center items-center h-[60vh] transition-opacity duration-700">
-                <span className="loading loading-bars loading-xl"></span>
+                <span className="loading loading-bars loading-xl text-red-500"></span>
             </div>
         );
     }
 
     return (
         <>
-            <section className="relative min-h-screen bg-black text-white overflow-hidden">
+            <section className="relative min-h-screen bg-black text-white overflow-hidden py-6 sm:py-[50px] xl:py-[100px]">
                 {/* 🔹 Background image with gradient overlay */}
                 <div
-                className="absolute inset-0 bg-cover bg-center opacity-40"
+                className="absolute inset-0 bg-cover bg-center opacity-40 min-h-screen"
                 style={{ backgroundImage: `url(${movie.poster})` }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
                 {/* 🔹 Content */}
                 <div className='container-custom'>
-                    <div className="relative z-10 py-[80px] md:py-[100px] flex flex-wrap items-center">
+                    <div className="relative z-10 py-[80px] md:py-[100px] flex flex-wrap items-center max-w-[1000px] mx-auto">
                         {/* Left: Movie Poster */}
                         <div className="w-full md:w-1/2 lg:w-1/3 h-full">
                             <img

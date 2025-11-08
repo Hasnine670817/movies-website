@@ -1,35 +1,19 @@
-import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useMovies from "../useMovies";
 
 const TrendingMovies = () => {
 
-    const [movies, setMovies] = useState([]);
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        fetch('/Movies.json')
-            .then(res => res.json())
-            .then(data => {
-                setMovies(data);
-                setLoading(false)
-            })
-            .catch(error => {
-                console.error(error);
-                setLoading(false)
-            })
-    }, []);
+    const { movies, loading } = useMovies();
 
     const handleVideoDetails = (id) => {
         navigate(`/movie/${id}`)
-        // setSelectedMovie(movie);
-        // document.getElementById('movies__details').showModal();
     }
 
     if (loading) {
@@ -48,7 +32,7 @@ const TrendingMovies = () => {
             <div className='container-custom'>
                 <div className="flex items-center justify-between">
                     <h3 className="text-2xl md:text-3xl relative z-20 inline-block">Trending Now</h3>
-                    <a href="#" className="text-xs font-bold text-red-500 relative z-30 underline">View more</a>
+                    <Link to={"/all-trending-movies"} className="text-xs font-bold text-red-500 relative z-30 underline">View more</Link>
                 </div>
                 <div>
                     <Swiper
@@ -109,12 +93,6 @@ const TrendingMovies = () => {
                             ))
                         }
                     </Swiper>
-
-                    {/* {
-                        selectedMovie && (
-                            <MoviesDetails movie={selectedMovie}></MoviesDetails>
-                        )
-                    } */}
                 </div>
             </div>
         </section>
