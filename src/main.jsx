@@ -14,6 +14,7 @@ import MoviesDetails from './Components/MoviesDetails';
 import AllTrendingMovies from './Movies/AllTrendingMovies';
 import AllHollywoodMovies from './Movies/AllHollywoodMovies';
 import AllBollywoodMovies from './Movies/AllBollywoodMovies';
+import AllBanglaMovies from './Movies/AllBanglaMovies';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/all-bollywood-movies",
         element: <AllBollywoodMovies></AllBollywoodMovies>
+      },
+      {
+        path: "/all-bangla-movies",
+        element: <AllBanglaMovies></AllBanglaMovies>
       },
       {
         path: "/movie/:id",
