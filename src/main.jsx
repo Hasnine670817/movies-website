@@ -12,6 +12,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import MoviesDetails from './Components/MoviesDetails';
 import AllTrendingMovies from './Movies/AllTrendingMovies';
+import AllHollywoodMovies from './Movies/AllHollywoodMovies';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/all-trending-movies",
         element: <AllTrendingMovies></AllTrendingMovies>
+      },
+      {
+        path: "/all-hollywood-movies",
+        element: <AllHollywoodMovies></AllHollywoodMovies>
       },
       {
         path: "/movie/:id",

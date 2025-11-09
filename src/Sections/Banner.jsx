@@ -32,7 +32,7 @@ const Banner = () => {
                 {
                     slides.map((slide, idx) => (
                         <SwiperSlide key={idx} className='relative z-10'>
-                            <div className='overflow-hidden h-[550px] lg:h-[600px] xl:h-[700px] 2xl:h-[900px]'>
+                            <div className='overflow-hidden h-[550px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]'>
                                 <img className='h-full object-cover object-center w-full zoom-img' src={slide} alt="image" />
                             </div>
                             <div className='absolute bg-black/60 w-full h-full left-0 top-0'></div>
