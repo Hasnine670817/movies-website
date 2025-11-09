@@ -1,4 +1,5 @@
 import Banner from '../Sections/Banner';
+import BollywoodMovies from '../Sections/BollywoodMovies';
 import HollywoodMovies from '../Sections/HollywoodMovies';
 import JoinSection from '../Sections/JoinSection';
 import TrendingMovies from '../Sections/TrendingMovies';
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <TrendingMovies></TrendingMovies>
+            <BollywoodMovies></BollywoodMovies>
             <HollywoodMovies></HollywoodMovies>
             <JoinSection></JoinSection>
         </div>

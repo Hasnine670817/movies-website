@@ -7,7 +7,7 @@ const HollywoodMovies = () => {
         <MovieSection
         title="Hollywood Movies" 
         filterCondition={(movie) => movie.category === "Hollywood"} 
-        sliceCondition={[0, 10]}
+        sliceCondition={[6, 14]}
         link="/all-hollywood-movies"
         ></MovieSection>
     );

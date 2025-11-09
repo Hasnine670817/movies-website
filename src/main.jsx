@@ -13,6 +13,7 @@ import About from './Pages/About';
 import MoviesDetails from './Components/MoviesDetails';
 import AllTrendingMovies from './Movies/AllTrendingMovies';
 import AllHollywoodMovies from './Movies/AllHollywoodMovies';
+import AllBollywoodMovies from './Movies/AllBollywoodMovies';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/all-hollywood-movies",
         element: <AllHollywoodMovies></AllHollywoodMovies>
+      },
+      {
+        path: "/all-bollywood-movies",
+        element: <AllBollywoodMovies></AllBollywoodMovies>
       },
       {
         path: "/movie/:id",
