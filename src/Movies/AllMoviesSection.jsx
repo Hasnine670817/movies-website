@@ -11,8 +11,8 @@ const AllMoviesSection = ({filterMoviesCondition, title}) => {
     const [sortBy, setSortBy] = useState("");
     const [sorting, setSorting] = useState(false);
 
-    // filter all trending movies
-    const trendingMovies = movies.filter(filterMoviesCondition);
+    // filter all movies
+    const allMovies = filterMoviesCondition ? movies.filter(filterMoviesCondition) : movies;
 
     // for search handler
     const handleSearchInput = (e) => {
@@ -20,7 +20,7 @@ const AllMoviesSection = ({filterMoviesCondition, title}) => {
     }
 
     // for search filter
-    let filteredMovies = trendingMovies.filter(movie => 
+    let filteredMovies = allMovies.filter(movie => 
         movie.title.toLowerCase().includes(searchText.toLowerCase())
     );
 
