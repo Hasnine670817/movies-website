@@ -14,14 +14,6 @@ It allows users to explore trending, popular, and categorized movies with a clea
 
 ---
 
-## 🖼️ **Preview**
-
-<div align="center">
-  <img src="https://i.ibb.co.com/jZ4PgPZ8/movies-website-bg2.png" alt="Movies Galaxy Preview" style="width:100%; max-width:1000px; height:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.3);" />
-</div>
-
----
-
 ## ✨ **Features**
 
 - 🎞️ **All Movies Section** – Displays movies from multiple categories (Bangla, Hollywood, Tamil, Chinese, Japanese)  
