@@ -1,16 +1,74 @@
-# React + Vite
+# 🎬 **Movies Website** — Modern Movie Streaming Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+| ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white) | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | ![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge) |
+|---|---|---|---|
 
-Currently, two official plugins are available:
+A **modern, dynamic, and responsive movie streaming website** built with **React**, **Tailwind CSS**, and **Swiper.js**.  
+It allows users to explore trending, popular, and categorized movies with a clean UI and smooth interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔗 **Live Demo**
+🎥 Explore it live here:  
+[🌐 Visit website](https://movies-website-01.surge.sh/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🖼️ **Preview**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<div align="center">
+  <img src="https://i.ibb.co.com/jZ4PgPZ8/movies-website-bg2.png" alt="Movies Galaxy Preview" style="width:100%; max-width:1000px; height:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.3);" />
+</div>
+
+---
+
+## ✨ **Features**
+
+- 🎞️ **All Movies Section** – Displays movies from multiple categories (Bangla, Hollywood, Tamil, Chinese, Japanese)  
+- 🌟 **Trending Movies** – Dynamically shows trending titles with real-time filtering  
+- 🔍 **Search Functionality** – Instantly filter movies by title or keyword  
+- 📂 **Category Filtering** – Browse movies by specific category  
+- 📱 **Responsive Design** – Fully optimized for mobile, tablet, and desktop  
+- 🎬 **Watch Now Page** – Movie player page with title, rating, and description  
+- 🧠 **Reusable Components** – Modular and maintainable React structure (e.g., `AllMoviesSection`)  
+- 🌀 **Swiper Slider** – Smooth carousel for featured or trending movies  
+- ⚡ **Fast Loading** – Lightweight, optimized images and clean layout  
+- 🔒 **Error Handling** – Handles empty search results & data loading states  
+- 📊 **JSON Data Source** – Movie data managed through local JSON for easy updates  
+
+---
+
+## 🧰 **Tech Stack**
+
+| Technology | Purpose |
+|------------|----------|
+| **React.js** | Frontend UI Framework |
+| **Tailwind CSS** | Responsive Styling |
+| **JavaScript (ES6+)** | App Logic & Functionality |
+| **Swiper.js** | Interactive Sliders |
+| **React Router** | Page Navigation |
+| **JSON** | Static Data Storage |
+| **Surge** | Free Hosting & Deployment |
+
+---
+
+## ⚙️ **Installation & Setup**
+
+Follow these steps to run the project locally:
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/Hasnine670817/movies-website.git
+
+# 2️⃣ Navigate to the project directory
+cd movies-website
+
+# 3️⃣ Install dependencies
+npm install
+# or
+yarn install
+
+# 4️⃣ Start the development server
+npm start
+# or
+yarn start
